@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar Interactivo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Avatar.css') }}">
+
+</head>
+<body>
+    <div class="avatar-container">
+        <div class="video-container">
+            <video id="avatar-video" autoplay loop muted>
+                <source src="{{ url_for('static', filename='images/HELLO.mp4') }}" type="video/mp4">
+                Tu navegador no soporta el formato de video.
+            </video>
+        </div>
+        <div class="text-container">
+            <div class="message-box">
+                <p id="text-content">¡Hola! Soy Piper, tu asistente virtual. Vamos a aprender juntos.</p>
+            </div>
+        </div>
+        <div id="button-container">
+            <button id="continue-button" onclick="nextStep()">Continuar</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/Avatar.js') }}"></script>
+</body>
+</html>

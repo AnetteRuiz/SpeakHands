@@ -1,0 +1,267 @@
+:root {
+    /* Colores principales */
+    --color-principal: #4A90E2; /* Azul pastel brillante */
+    --color-secundario: #FFB400; /* Amarillo cálido y suave */
+    --color-contraste: #F9FAFB; /* Blanco puro ligeramente cálido */
+
+    /* Fondos */
+    --color-fondo-principal: #F5F7FA; /* Gris claro suave */
+    --color-fondo-sec: #EAF2FA; /* Azul muy claro pastel */
+    --color-fondo-osc: #2C3E50; /* Azul marino con gris oscuro */
+
+    /* Botones */
+    --color-boton-principal: #4A90E2; /* Azul pastel brillante */
+    --color-boton-principal-texto: #FFFFFF; /* Blanco */
+    --color-boton-principal-hover: #357ABD; /* Azul pastel más profundo */
+
+    --color-boton-secundario: #FFB400; /* Amarillo cálido */
+    --color-boton-secundario-texto: #FFFFFF; /* Blanco */
+    --color-boton-secundario-hover: #E5A000; /* Amarillo oscuro */
+
+    /* Texto */
+    --color-texto-principal: #34495E; /* Azul grisáceo oscuro */
+    --color-texto-secundario: #7F8C8D; /* Gris medio suave */
+    --color-texto-acento: #4A90E2; /* Azul pastel para enlaces o elementos destacados */
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--color-fondo-principal);
+    color: #333;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+    background-color: var(--color-fondo-principal);
+    font-family: 'Inter', sans-serif;
+    font-weight:bolder;
+    
+}
+
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-texto-principal);
+}
+
+.version {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--color-texto-principal);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 40px 0;
+    flex: 1;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.image-placeholder {
+    width: 300px;
+}
+
+.illustration {
+    width: 140%;
+    margin-bottom: 110px;
+}
+
+.text-content h1 {
+    margin-left: 70px;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--color-texto-principal);
+    font-weight: 700;
+}
+
+.btn-primary, .btn-secondary {
+    font-size: 1.2em;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--color-principal);
+    color: var(--color-boton-principal-texto);
+    font-weight: bold;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2);
+    
+}
+
+.btn-primary:hover {
+    background-color: var(--color-boton-principal-hover);
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary {
+    background-color: var(--color-boton-secundario);
+    color: var(--color-boton-secundario-texto);
+    font-weight: bold;
+    border: 1.5px solid var(--border-principal);
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary:hover {
+    color: var(--color-boton-secundario-texto);
+    background-color: var(--color-boton-secundario-hover);
+    border-color: #CCCCCC;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Estilos de los elementos del formulario */
+form h2 {
+    color: var(--color-texto-principal);
+    margin-bottom: 30px;
+    font-size: 1.5em;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: var(--color-texto-principal);
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid var(--color-texto-principal);
+    border-radius: 9px;
+    color: var(--color-texto-principal);
+}
+
+/* Botón de ingreso */
+.btn-login {
+    background-color: var(--color-principal);
+    color: var(--color-boton-principal-texto);
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.btn-login:hover {
+    background-color: var(--color-boton-principal-hover);
+}
+
+/* Botón de Olvidé mi Contraseña */
+.btn-forgot-password {
+    background-color: transparent;
+    color: var(--color-texto-secundario);
+    font-size: 0.9em;
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+    margin-top: 5px;
+    text-decoration: underline;
+}
+
+.btn-forgot-password:hover {
+    color: var(--color-texto-principal);
+    text-decoration: underline;
+}
+
+.modal-2 {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    
+}
+
+.modal-content-2 {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-2 {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+

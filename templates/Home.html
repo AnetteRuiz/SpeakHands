@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeakHands - Inicio</title>
+    <link rel="stylesheet" href="/static/css/Home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="main-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>SpeakHands</h1>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#" class="active"><span>🏠</span> Inicio</a></li>
+                    <li><a href="{{ url_for('Learn') }}"><span>📖</span> Aprender</a></li>
+                    <li><a href="{{ url_for('convertidor') }}"><span>🔠</span> Traductor</a></li>
+                    <li><a href="{{ url_for('Restaurantes') }}"><span>👥</span> Restaurantes</a></li>
+                    <li><a href="#"><span>⚙️</span> Configuración</a></li>
+                    <li><a href="http://127.0.0.1:5000/"><span>🚪</span> Salir</a></li>
+                    <li class="avatar">
+                        <video id="avatar-video" autoplay loop muted>
+                            <source src="/static/images/IDLE.mp4" type="video/mp4">
+                            Tu navegador no soporta el formato de video.
+                        </video>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Contenido principal -->
+        <div class="container">
+            <div class="hero-section">
+                <h1>¡Bienvenido a SpeakHands!</h1>
+                <p>Aprende la lengua de señas de manera divertida y efectiva. ¡Conéctate con la comunidad y amplía tus habilidades!</p>
+                <div class="hero-buttons">
+                    <a href="{{ url_for('Learn') }}">
+                        <button>Comienza a aprender</button>
+                    </a>
+                    <a href="{{ url_for('convertidor') }}">
+                        <button>Traduce una frase</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Beneficios -->
+        <div class="benefits">
+            <div class="benefit">
+                <h2>Gratis. Divertido. Efectivo.</h2>
+                <p>
+                    Aprende lengua de señas de forma interactiva y efectiva con lecciones cortas y atractivas. 
+                    Desbloquea habilidades comunicativas reales mientras te diviertes.
+                </p>
+            </div>
+            <div class="benefit">
+                <img src="/static/images/muchacha.png" alt="Ilustración divertida">
+            </div>
+            <div class="benefit">
+                <img src="/static/images/ciencia.png" alt="Ilustración científica">
+            </div>
+            <div class="benefit">
+                <h2>Respaldado por la ciencia</h2>
+                <p>
+                    Usamos métodos respaldados por investigaciones para diseñar cursos efectivos que te ayuden a 
+                    aprender de manera rápida y significativa.
+                </p>
+            </div>
+            <div class="benefit">
+                <h2>Accesible para todos</h2>
+                <p>
+                    Nuestra plataforma está diseñada para ser inclusiva, asegurando que cualquier persona, sin importar su nivel, 
+                    pueda aprender y mejorar sus habilidades de comunicación.
+                </p>
+            </div>
+            <div class="benefit">
+                <img src="/static/images/personas.png" alt="Ilustración accesible">
+            </div>
+            <div class="benefit">
+                <img src="/static/images/señora_señas.png" alt="Ilustración comunidad">
+            </div>
+            <div class="benefit">
+                <h2>Conexión con la comunidad</h2>
+                <p>
+                    Forma parte de una comunidad activa donde puedes practicar, interactuar y aprender de otros usuarios, 
+                    fortaleciendo tus habilidades en un entorno social.
+                </p>
+            </div>
+        </div>
+
+        <!-- Sección de Preguntas Frecuentes -->
+        <div class="faq-section">
+            <!-- Título fuera del grid -->
+            <div class="faq-title">Preguntas Frecuentes</div>
+            
+            <!-- Tarjetas en un grid -->
+            <div class="faq-items">
+                <div class="faq-item">
+                    <h3>¿Cómo puedo empezar a aprender lengua de señas?</h3>
+                    <p>
+                        Es muy fácil. Solo regístrate en nuestra plataforma y accede a los cursos gratuitos diseñados 
+                        para principiantes.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿La plataforma es completamente gratuita?</h3>
+                    <p>
+                        Sí, ofrecemos cursos gratuitos. También contamos con contenido premium para aquellos que 
+                        desean aprender más a fondo.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Puedo practicar con otras personas?</h3>
+                    <p>
+                        ¡Claro! Nuestra plataforma incluye una comunidad activa donde puedes interactuar y practicar 
+                        con otros estudiantes.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3>¿Qué tan rápido puedo aprender?</h3>
+                    <p>
+                        Depende de tu dedicación, pero nuestras lecciones están diseñadas para que avances rápidamente 
+                        con tan solo unos minutos al día.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    <script src=""></script>
+</body>
+</html>

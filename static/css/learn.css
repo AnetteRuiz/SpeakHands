@@ -1,0 +1,218 @@
+:root {
+    --color-principal: #4A90E2;
+    --color-secundario: #FFB400;
+    --color-fondo: #F5F7FA;
+    --color-texto: #34495E;
+    --color-cuadro: #FFFFFF;
+    --color-sidebar: #F9FAFB;
+    --color-sidebar-hover: #EAF2FA;
+    --color-boton: #4A90E2;
+    --color-boton-hover: #357ABD;
+    --color-titulo: #333333;
+    --color-subtitulo: #555555;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: var(--color-fondo);
+    display: flex;
+    height: 100vh;
+    color: var(--color-texto);
+}
+
+/* Contenedor principal */
+.main-layout {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: var(--color-sidebar);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    height: 100vh;
+    z-index: 10;
+}
+
+.sidebar .logo h1 {
+    font-size: 1.8em;
+    color: var(--color-principal);
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.menu ul li {
+    margin: 15px 0;
+}
+
+.menu ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    color: var(--color-texto);
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu ul li a span {
+    margin-right: 15px;
+    font-size: 1.3em;
+}
+
+.menu ul li a:hover,
+.menu ul li a.active {
+    background-color: var(--color-sidebar-hover);
+    color: var(--color-principal);
+}
+
+/* Contenido principal */
+.main-content {
+    flex: 1;
+    margin-left: 270px; /* espacio para el sidebar */
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+/* Título principal */
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h2 {
+    font-size: 2.5em;
+    color: var(--color-titulo);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.page-header h2 span {
+    color: var(--color-principal);
+}
+
+.page-header p {
+    font-size: 1.2em;
+    color: var(--color-subtitulo);
+}
+
+/* Secciones estilo Duolingo */
+.secciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 0 50px;
+}
+
+.seccion {
+    background-color: var(--color-cuadro);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.seccion:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.icono {
+    font-size: 3.5em;
+    color: var(--color-principal);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.seccion:hover .icono {
+    transform: rotate(15deg);
+}
+
+h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--color-texto);
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1em;
+    color: var(--color-subtitulo);
+}
+
+@media (max-width: 768px) {
+    .secciones {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .secciones {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilo básico para los botones */
+.btn-leccion {
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: white;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    width: 100%; /* Hace que el botón ocupe todo el ancho de su contenedor */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto hover en el botón */
+.btn-leccion:hover {
+    background-color: var(--color-secundario);
+    transform: scale(1.05);
+}
+
+/* Estilo para los botones en pantallas grandes */
+@media (min-width: 768px) {
+    .btn-leccion {
+        width: auto; /* El botón no ocupa todo el ancho en pantallas grandes */
+    }
+}
+
+/* Estilo de accesibilidad para un botón activo */
+.btn-leccion:focus {
+    outline: 3px solid var(--color-principal);
+}
+
+
+
+
+
+
+/* Estilo específico para las nuevas lecciones */
+.seccion:nth-child(n) {
+    background-color: var(--color-sidebar); /* Un color de fondo suave */
+    border-left: 5px solid var(--color-principal);
+}
+
+

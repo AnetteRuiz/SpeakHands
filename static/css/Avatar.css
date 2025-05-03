@@ -1,0 +1,178 @@
+
+:root {
+    --color-principal: #4A90E2;
+    --color-secundario: #FFB400;
+    --color-fondo: #F5F7FA;
+    --color-texto: #34495E;
+    --color-cuadro: #FFFFFF;
+    --color-sidebar: #F9FAFB;
+    --color-sidebar-hover: #EAF2FA;
+    --color-boton: #4A90E2;
+    --color-boton-hover: #357ABD;
+}
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cuerpo y estructura general */
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f7f6;
+}
+
+/* Contenedor principal de la página */
+.avatar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Estilo del contenedor del video (lado izquierdo) */
+.video-container {
+    flex: 1;
+    max-width: 50%;
+    margin-left: 170px;
+    overflow: hidden; /* Hace que el video no sobresalga */
+}
+
+video {
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    animation: videoAnimation 1s ease-out forwards; /* Animación del video */
+}
+
+/* Animación de entrada del video */
+@keyframes videoAnimation {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Estilo del contenedor del texto (lado derecho) */
+.text-container {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    
+}
+
+/* Caja del mensaje (simula un cuadro de texto flotante) */
+.message-box {
+    background-color: var(--color-sidebar);
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 80%;
+    margin-bottom: 25px;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: messageEnter 1s ease-out forwards;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación de entrada para el mensaje */
+@keyframes messageEnter {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    70% {
+        opacity: 0.8;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de salida para el mensaje (desaparecer y subir) */
+@keyframes messageExit {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+/* Botón de continuar (abajo a la derecha) */
+#button-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: buttonAppear 0.8s ease-out 1s forwards;
+}
+
+button {
+    background-color: var(--color-boton);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación del botón aparecer */
+@keyframes buttonAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button:hover {
+    background-color: var(--color-boton-hover);
+    transform: scale(1.05);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Estilos generales de la página */
+.message-box p {
+    margin: 0;
+    line-height: 1.5;
+}

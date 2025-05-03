@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurantes Inclusivos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/restaurante.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="main-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>SpeakHands</h1>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="{{ url_for('home') }}"><span>🏠</span> Inicio</a></li>
+                    <li><a href="{{ url_for('Learn') }}"><span>📖</span> Aprender</a></li>
+                    <li><a href="{{ url_for('convertidor') }}"><span>🔠</span> Traductor</a></li>
+                    <li><a href="{{ url_for('Restaurantes') }}" class="active"><span>👥</span> Restaurantes</a></li>
+                    <li><a href="#"><span>⚙️</span> Configuración</a></li>
+                    <li><a href="http://127.0.0.1:5000/"><span>🚪</span> Salir</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Sección de Restaurantes Inclusivos -->
+        <section class="restaurants-section">
+            <h2>Restaurantes Inclusivos para Personas Sordomudas</h2>
+            <div class="search-bar">
+                <input type="text" id="restaurant-search" placeholder="Buscar restaurante..." aria-label="Buscar restaurante">
+                <button onclick="searchRestaurants()">Buscar</button>
+            </div>
+            <div class="restaurant-list" id="restaurant-list">
+                <!-- Ejemplo de restaurante -->
+                <div class="restaurant">
+                    <h3>Restaurante ABC</h3>
+                    <p><strong>Dirección:</strong> Calle 123, Ciudad XYZ</p>
+                    <p><strong>Accesibilidad:</strong> Lengua de señas, Menú en braille</p>
+                </div>
+                <div class="restaurant">
+                    <h3>Comida Inclusiva</h3>
+                    <p><strong>Dirección:</strong> Calle 456, Ciudad ABC</p>
+                    <p><strong>Accesibilidad:</strong> Subtítulos en pantallas, Lengua de señas</p>
+                </div>
+                <!-- Más restaurantes pueden ser agregados aquí -->
+            </div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/restaurante.js') }}"></script>
+</body>
+</html>

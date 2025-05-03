@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Convertidor.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="main-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>SpeakHands</h1>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="{{ url_for('home') }}"><span>🏠</span> Inicio</a></li>
+                    <li><a href="{{ url_for('Learn') }}"><span>📖</span> Aprender</a></li>
+                    <li><a href="#" class="active"><span>🔠</span> Traductor</a></li>
+                    <li><a href="{{ url_for('Restaurantes') }}"><span>👥</span> Restaurantes</a></li>
+                    <li><a href="#"><span>⚙️</span> Configuración</a></li>
+                    <li><a href="http://127.0.0.1:5000/"><span>🚪</span> Salir</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Contenedor principal -->
+        <div class="container">
+            <div class="square">
+                <h2 class="lengua-senas">Lengua de señas:</h2>
+                <!-- Texto dinámico que muestra lo que dice el usuario -->
+                <h3 id="dynamic-text">Aquí aparecerá lo que digas</h3>
+                <!-- Imagen dinámica (puedes enlazarla con palabras reconocidas) -->
+                <img src="" alt=" " id="dynamic-image" style="width: 200px; height: 200px;">
+
+                <!-- Botón para activar/desactivar el micrófono -->
+                <button id="mic-button">🎤 Activar Micrófono</button>
+
+                <!-- Botones adicionales -->
+                <button id="next-button">Siguiente</button>
+                <!-- Botón para enviar y procesar la voz -->
+                <button id="submit-button" class="btn-primary">Enviar</button>
+            
+                <p id="result"></p>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/convertidor.js') }}"></script>
+</body>
+</html>

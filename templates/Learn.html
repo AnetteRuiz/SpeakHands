@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn - SpeakHands</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Learn.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="main-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>SpeakHands</h1>
+                
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="{{ url_for('home') }}"><span>🏠</span> Inicio</a></li>
+                    <li><a href="#" class="active"><span>📖</span> Aprender</a></li>
+                    <li><a href="{{ url_for('convertidor') }}"><span>🔠</span> Traductor</a></li>
+                    <li><a href="{{ url_for('Restaurantes') }}"<>👥</span> Restaurantes</a></li>
+                    <li><a href="#"><span>⚙️</span> Configuración</a></li>
+                    <li><a href="http://127.0.0.1:5000/"><span>🚪</span> Salir</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <header class="page-header">
+                <h2>Aprende <span>a tu ritmo</span></h2>
+                <p>Empieza tu viaje de aprendizaje con nosotros.</p>
+            </header>
+
+            <section class="secciones">
+                <!-- Lecciones existentes -->
+                <div class="seccion">
+                    <div class="icono">
+                        <span>🗣️</span>
+                    </div>
+                    <h3>Lección 1: Saludos</h3>
+                    <p>Comienza aprendiendo los saludos básicos.</p>
+                    <a href="">
+                        <button class="btn-leccion">Comenzar lección</button>
+                    </a>
+                    
+                </div>
+                <div class="seccion">
+                    <div class="icono">
+                        <span>🍽️</span>
+                    </div>
+                    <h3>Lección 2: En el restaurante</h3>
+                    <p>Aprende frases útiles para tu experiencia gastronómica.</p>
+                    <a href="">
+                        <button class="btn-leccion">Comenzar lección</button>
+                    </a>
+                </div>
+                <div class="seccion">
+                    <div class="icono">
+                        <span>🛒</span>
+                    </div>
+                    <h3>Lección 3: Compras</h3>
+                    <p>Domina las expresiones clave para tus compras diarias.</p>
+                    <a href="">
+                        <button class="btn-leccion">Comenzar lección</button>
+                    </a>
+                </div>
+                <div class="seccion">
+                    <div class="icono">
+                        <span>🛏️</span>
+                    </div>
+                    <h3>Lección 4: Alojamiento</h3>
+                    <p>Todo lo que necesitas saber para hospedarte con facilidad.</p>
+                    <a href="">
+                        <button class="btn-leccion">Comenzar lección</button>
+                    </a>
+                </div>
+            
+                <!-- Nuevas lecciones sobre lenguaje de señas -->
+                <div class="seccion">
+                    <div class="icono">
+                        <span>✋</span>
+                    </div>
+                    <h3>Lección 5: Los números</h3>
+                    <p>Aprende cómo se señalan los números del 1 al 10 en lenguaje de señas.</p>
+                    <a href="">
+                        <button class="btn-leccion">Comenzar lección</button>
+                    </a>
+                </div>
+                <div class="seccion">
+                    <div class="icono">
+                        <span>👋</span>
+                    </div>
+                    <h3>Lección 6: Presentaciones</h3>
+                    <p>Descubre cómo presentarte y saludar a otras personas en lengua de señas.</p>
+                    <a href="">
+                        <button class="btn-leccion">Comenzar lección</button>
+                    </a>
+                </div>
+                <div class="seccion">
+                    <div class="icono">
+                        <span>🏠</span>
+                    </div>
+                    <h3>Lección 7: En casa</h3>
+                    <p>Aprende cómo comunicarte sobre los objetos y actividades en tu hogar.</p>
+                    <a href="">
+                        <button class="btn-leccion">Comenzar lección</button>
+                    </a>
+                </div>
+                <div class="seccion">
+                    <div class="icono">
+                        <span>🚗</span>
+                    </div>
+                    <h3>Lección 8: Transporte</h3>
+                    <p>Aprende las señales relacionadas con el transporte público y los medios de transporte.</p>
+                    <a href="">
+                        <button class="btn-leccion">Comenzar lección</button>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src=""></script>
+</body>
+
+</html>
